@@ -89,3 +89,20 @@ function validateForm(){
         let pattern = /\S+@\.S+/;
                return pattern.test(email);
     }
+
+    // json topplayers
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => {
+       return res.json();
+        })
+        .then(data =>{
+            data.forEach(user =>{
+                const markup = `<li>${user.name}</li>`;
+
+                document.querySelector('.player-list').insertAdjacentHTML('beforeend', markup);
+            })
+        })
+        .catch (error => {
+            console.log(error);
+        })
