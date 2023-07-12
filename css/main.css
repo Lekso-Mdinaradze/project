@@ -75,6 +75,10 @@ img{
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
+@keyframes logoanimation{
+    0% {letter-spacing: 0px;}
+    100% {letter-spacing: 10px;}
+}
 .navbar-brand{
     font-family: var(--audiowide);
     font-size: 4rem;
@@ -82,6 +86,7 @@ img{
 }
 .navbar-brand span{
     color: var(--green-color);
+    animation: logoanimation 3s linear infinite;
 }
 .search-form{
     display: none;
